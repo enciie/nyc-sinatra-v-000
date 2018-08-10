@@ -16,5 +16,16 @@
 
   <h4><label>Edit Landmark:</label></h4>
   <%Landmark.all.each do |landmark|%>
+    <label><%= landmark.name %></label>
+    <input type="checkbox" id="landmark_<%= landmark.id %>" name="figure[landmark_ids][]" value="<%= landmark.id %>"><br>
+  <% end %>
+
+  <h3><label>Create New Landmark:</label></h3><br>
+  <label>Name:</label>
+  <input type="text" id="new_landmark" name="landmark[name]">
+  <label>Year:</label>
+  <input type="text" name="landmark[year_completed]">
+  
+  <input type="submit" value="Edit Figure">
 
 </form>
