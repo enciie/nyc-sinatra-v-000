@@ -2,10 +2,10 @@
 <form action="/figures/<%@figure.id%>" method="post">
   <input type="hidden" name="_method" value="patch">
 
-  <h4><label>Edit Figure Name:</label></h4>
+  <h3><label>Edit Figure Name:</label></h3>
   <input type="text" name="figure[name]" id="figure_name" value="<%=@figure.name%>"><br>
 
-  <h4><label>Edit Title:</label></h4>
+  <h3><label>Edit Title:</label></h3>
   <%Title.all.each do |title|%>
     <label><%= title.name %></label>
     <input type="checkbox" id="title_<%= title.id %>" name="figure[title_ids][]" value="<%= title.id %>"><br>
