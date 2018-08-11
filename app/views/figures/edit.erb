@@ -7,10 +7,10 @@
 
   <h3><label>Edit Title:</label></h3>
   
-  <%Title.all.each do |title|%>
+  <% Title.all.each do |title| %>
     <label><%= title.name %></label>
-    <input type="checkbox" id="title_<%= title.id %>" name="figure[title_ids][]" value="<%= title.id %>" <%= 'checked' if @figure.title.include?(title) %>><%=title.name%>
-  <% end %>
+    <input type="checkbox" name="figure[title_ids][]" value="<%= title.id %>" id="<%= title.name %>" <%='checked' if @figure.titles.include?(title) %>>
+  <% end %></br>
   
   <h3><label>Create New Title:</label></h3>
   <input type="text" id="new_title" name="title[name]"><br></br>
